@@ -4,8 +4,8 @@ import './App1.css';
 const Questions =(props)=>{
   return(
     <div className="Questions">
-      <p>{props.netQuest}</p>
-      
+      <div className="questleft">{props.netQuest}</div>
+      <div className="plus">+</div>
     </div>
   )
 }
@@ -23,10 +23,10 @@ class App extends Component{
           <Questions netQuest= "What can I watch on Netflix?"/>
           <Questions netQuest= "How does the free trial work?"/>
         < div className="Free Trial">
-          <p>TRY 30 DAYS FREE</p>
+          <p>TRY 30 DAYS FREE ></p>
         </div>
       </div>
-    )
+    ) 
   }
 }
 
