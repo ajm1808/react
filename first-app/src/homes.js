@@ -15,9 +15,33 @@ import john from './image/john.PNG';
 class App extends Component {
     state = {
       ReviewBox: [
-          {img: imgHome1,stars:imgStars,content:"Gary was such a great host during our time in Brighton. He made us feel at home and was helpful with any questions we had about directions or things to do. The room he has...",name:"Cheryl",location:"United States",selfie:cheryl,id:1},
-          {img: imgHome2,stars:imgStars,content:"Very accommodating with my booking and welcoming to all of us.Thanks!",name:"Charlie",location:"United Kingdom",selfie:charlie,id:2},
-          {img: imgHome3,stars:imgStars,content:"Wow...Alyson is truly an amazing person. 1st class accommodations and we got the difficult news...",name:"John Wayne",location:"Canada",selfie:john,id:3},
+          {
+              img: imgHome1,
+              stars:imgStars,
+              content:"Gary was such a great host during our time in Brighton. He made us feel at home and was helpful with any questions we had about directions or things to do. The room he has...",
+              name:"Cheryl",
+              location:"United States",
+              selfie:cheryl,
+              id:1
+            },
+          {
+              img: imgHome2,
+              stars:imgStars,
+              content:"Very accommodating with my booking and welcoming to all of us.Thanks!",
+              name:"Charlie",
+              location:"United Kingdom",
+              selfie:charlie,
+              id:2
+            },
+          {
+              img: imgHome3,
+              stars:imgStars,
+              content:"Wow...Alyson is truly an amazing person. 1st class accommodations and we got the difficult news...",
+              name:"John Wayne",
+              location:"Canada",
+              selfie:john,
+              id:3
+            },
       ]
     }
     render (){

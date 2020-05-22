@@ -1,28 +1,37 @@
-import React, {Component} from 'react';
-import Carbox from './components/Carbox';
+import React,{Component} from 'react';
 import './App.css';
 
-
-
 class App extends Component {
-    render(){
-        return(
+    state ={
+        numbers: [1,2,3,4],
+        currentNumber:""
+    }
+    recordNumberHandler = (event)=>{
+        console.log(event.target.value)
+        this.setState({
+            currentNumber:event.target.value
+        })
+    }
+
+    addNumberHandler = ()=>{
+        this.setState({
+            numbers:[...this.state.numbers,this.state.currentNumber],
+            currentNumber:""
+        })
+    }
+    render (){
+        const eachNumber=this.state.numbers.map((number,index)=>{
+            return <li key={index}>{number}</li>
+        })
+        return (
             <div className="App">
-                <div className="leftDeals">
-                        <h1>Latest brand new car deals</h1>
-                </div>
-                <div className="rightDeals">
-                        <h1>View more deals -></h1>
-                </div>
-                <Carbox type="Fiat"/>
-                
-
-
-
+            <h1>State - using methods</h1>
+            <ul>{eachNumber}</ul>
+            <input type="number" onChange={this.recordNumberHandler} value={this.state.currentNumber}/>
+            <button onClick={()=> this.addNumberHandler()}>Add Number</button>
             </div>
         )
     }
-
 }
 
 export default App;
