@@ -1,32 +1,32 @@
 import React, {Component} from 'react';
-import './App1.css';
+import Questions from './components/Questions';
+import './Netflix.css';
 
-const Questions =(props)=>{
-  return(
-    <div className="Questions">
-      <div className="questleft">{props.netQuest}</div>
-      <div className="plus">+</div>
-    </div>
-  )
-}
-
-class App extends Component{
-  render(){
-    return(
+class App extends Component {
+  state = {
+    question: [
+      {netQuest: "What is Netflix?", id:1},
+      {netQuest: "How much does Netflix cost?", id:2},
+      {netQuest: "Where can I watch?", id:3},
+      {netQuest: "How do I cancel?", id:4},
+      {netQuest: "What can I watch on Netflix?", id:5},
+      {netQuest: "How does the free trial work?", id:6},
+    ]
+  }
+  render() {
+    const eachQ = this.state.question.map((question) => {
+      return <Questions key = {question.id} question = {question.netQuest} />
+    })
+    return (
       <div className="App">
         <h1>Frequently Asked Questions</h1>
-        
-          <Questions netQuest= "What is Netflix?"/>
-          <Questions netQuest= "How much does Netflix Cost?"/>
-          <Questions netQuest= "Where can I watch?"/>
-          <Questions netQuest= "How do I cancel?"/>
-          <Questions netQuest= "What can I watch on Netflix?"/>
-          <Questions netQuest= "How does the free trial work?"/>
-        < div className="Free Trial">
-          <p>TRY 30 DAYS FREE ></p>
+        {eachQ}
+        <div className = "Free">
+          <div>TRY 30 DAYS FREE ></div>
         </div>
+​
       </div>
-    ) 
+    )
   }
 }
 
