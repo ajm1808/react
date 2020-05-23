@@ -1,4 +1,33 @@
 .App{
-   
+ 
     font:20px;
 }
+
+body {
+    text-align: center;
+    background-color: white;
+    color: black;  
+  }
+  .carboxContainer {
+   
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .carBox {
+    max-width:23%;
+    background-color: wheat;
+    margin:1%;
+    border-radius: 10px;
+    border: grey
+  }
+  img {
+    max-width: 100%;
+  }
+
+  .labels{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  
